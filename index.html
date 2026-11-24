@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Crochê Carine | Crochê para a sua casa</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600&family=Pacifico&family=Quicksand:wght@500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css">
+<script>
+// Aplica o tema salvo antes da página aparecer (evita piscar). A lógica completa está em app/models/TemaModel.js
+(function(){var t=null;try{t=localStorage.getItem('tema')}catch(e){}
+if(t!=='light'&&t!=='dark'){t=window.matchMedia&&matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light'}
+document.documentElement.setAttribute('data-theme',t)})();
+</script>
+</head>
+<body>
+<header class="top">
+  <div class="wrap">
+    <a class="logo" href="#inicio">Crochê Carine</a>
+    <nav aria-label="Principal">
+      <a href="#pecas">Peças</a>
+      <a href="#encomenda">Como encomendar</a>
+      <a href="#sobre">Sobre</a>
+      <a class="btn" href="#contato">Fazer encomenda</a>
+    </nav>
+    <button class="tema" id="tema" type="button" aria-label="Alternar entre modo claro e escuro"></button>
+  </div>
+</header>
+
+<main id="inicio">
+  <section class="hero">
+    <div class="wrap">
+      <div>
+        <h1>Crochê feito à mão para deixar sua casa mais aconchegante 🎀</h1>
+        <p class="lead">Sousplats, tapetes, chaveirinhos e caminhos de mesa feitos sob encomenda, nas cores e no tamanho que combinam com o seu espaço.</p>
+        <div class="btns">
+          <a class="btn" href="#contato">Quero encomendar</a>
+          <a class="btn ghost" href="#pecas">Ver as peças</a>
+        </div>
+      </div>
+      <div class="ph"><img src="assets/img/perfil.jpg" alt="perfil" style="object-position:50% 55%"></div>
+    </div>
+  </section>
+
+  <section class="alt">
+    <div class="wrap">
+      <h2>Talvez você esteja procurando...</h2>
+      <ul class="dores" id="dores"></ul>
+      <p class="fecho">Cada peça é feita ponto a ponto, pensando em quem vai receber.</p>
+    </div>
+  </section>
+
+  <section id="pecas">
+    <div class="wrap">
+      <h2>Peças para deixar a casa mais bonita</h2>
+      <p style="color:var(--muted);max-width:52ch">Todas as peças podem ser feitas em outras cores e tamanhos. É só pedir. Toque em uma categoria para ver as fotos.</p>
+      <div class="cards" id="catalogo"></div>
+    </div>
+  </section>
+
+  <section class="alt" id="encomenda">
+    <div class="wrap">
+      <h2>Como fazer sua encomenda</h2>
+      <p style="color:var(--muted);max-width:52ch">Simples, pelo WhatsApp, do primeiro contato até a entrega.</p>
+      <ol class="steps" id="passos"></ol>
+    </div>
+  </section>
+
+  <section id="galeria-sec">
+    <div class="wrap">
+      <h2>Um pouquinho do que já fiz 🧶</h2>
+      <div class="chips" id="chips" role="group" aria-label="Categorias de peças"></div>
+      <h3 class="galcat" id="galCategoria" aria-live="polite"></h3>
+      <div class="gal" id="galeria"></div>
+      <p style="margin-top:22px">Acompanhe também: <a data-rede="instagram" href="https://www.instagram.com/carine.croche" target="_blank" rel="noopener">Instagram</a> e no <a data-rede="tiktok" href="https://www.tiktok.com/@carine.croche" target="_blank" rel="noopener">TikTok</a>.</p>
+    </div>
+  </section>
+
+  <section class="alt" id="sobre">
+    <div class="wrap sobre">
+      <div class="ph"><img src="assets/img/carine.jpg" alt="Carine, artesã do Crochê Carine" style="object-position:50% 35%"></div>
+      <div>
+        <h2>Oi, eu sou a Carine! 💕</h2>
+          <p>Sou desenvolvedora de software e encontrei no crochê um hobby que comecei em 2025. Ainda sou iniciante nessa arte, mas estou aprendendo, criando e me apaixonando cada vez mais por cada peça! 🧶</p>
+          <p>Sou de Minas Gerais e faço peças de crochê sob encomenda e pronta entrega, com muito carinho. Envio para todo o Brasil!</p>
+          <p>Me acompanhe nas redes sociais! Compartilho dicas para crocheteiras, um pouquinho do meu processo de criação e meu trabalho para clientes.</p>
+          <p>Vamos criar algo especial para a sua casa?</p>
+        <a class="btn" href="#contato">Falar comigo</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="contato">
+    <div class="wrap">
+      <div class="contato">
+        <h2>Vamos criar a peça da sua casa?</h2>
+        <p>Me chame no WhatsApp, conte o que você imaginou e eu faço o orçamento.</p>
+        <a class="btn" id="zap" data-wa="Olá! Quero fazer uma encomenda." href="#" target="_blank" rel="noopener">Chamar no WhatsApp</a>
+        <div class="sociais">
+          <a data-rede="instagram" href="https://www.instagram.com/carine.croche" target="_blank" rel="noopener">Instagram @carine.croche</a>
+          <a data-rede="tiktok" href="https://www.tiktok.com/@carine.croche" target="_blank" rel="noopener">TikTok @carine.croche</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer><div class="wrap">© 2026 Carine Crochê. Todos os direitos reservados.<br>Desenvolvido por Carine Silveira.<p id="visitasBox" hidden style="margin:10px 0 0;font-size:.9rem">Visitas: <b id="visitas"></b></p></div></footer>
+
+<!-- Serviço externo do contador de visitas -->
+<script src="https://cdn.jsdelivr.net/npm/counterapi@2.1.2/dist/counter.browser.min.js"></script>
+<!-- MVC: núcleo, models, views, controllers (nesta ordem) -->
+<script src="app/App.js"></script>
+<script src="app/models/ConfigModel.js"></script>
+<script src="app/models/PecaModel.js"></script>
+<script src="app/models/GaleriaModel.js"></script>
+<script src="app/models/ConteudoModel.js"></script>
+<script src="app/models/ContadorModel.js"></script>
+<script src="app/models/TemaModel.js"></script>
+<script src="app/views/CardsView.js"></script>
+<script src="app/views/GaleriaView.js"></script>
+<script src="app/views/ChipsView.js"></script>
+<script src="app/views/ConteudoView.js"></script>
+<script src="app/views/ContatoView.js"></script>
+<script src="app/views/ContadorView.js"></script>
+<script src="app/views/TemaView.js"></script>
+<script src="app/controllers/CatalogoController.js"></script>
+<script src="app/controllers/GaleriaController.js"></script>
+<script src="app/controllers/ConteudoController.js"></script>
+<script src="app/controllers/ContatoController.js"></script>
+<script src="app/controllers/ContadorController.js"></script>
+<script src="app/controllers/TemaController.js"></script>
+<script src="app/main.js"></script>
+</body>
+</html>
